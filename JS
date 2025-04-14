@@ -1,0 +1,491 @@
+document.getElementById("orderResult").innerHTML = "Bun, ";
+
+order();
+
+function order() {
+  let meat = Math.floor(Math.random() * 4);
+
+  if (meat == 0) {
+    document.getElementById("orderResult").innerHTML += "Beef, ";
+  } else if (meat == 1) {
+    document.getElementById("orderResult").innerHTML += "Chicken, ";
+  } else if (meat == 2) {
+    document.getElementById("orderResult").innerHTML += "Pork, ";
+  } else if (meat == 3) {
+    document.getElementById("orderResult").innerHTML += "Vegan, ";
+  }
+  burgerTop();
+  topBun();
+}
+
+function burgerTop() {
+  let ingNum = Math.floor(Math.random() * 4 + 1);
+
+  for (var i = 0; i < ingNum; i++) {
+    let ingredient = Math.floor(Math.random() * 11);
+    if (ingredient == 0) {
+      document.getElementById("orderResult").innerHTML += "Mayo, ";
+    } else if (ingredient == 1) {
+      document.getElementById("orderResult").innerHTML += "Hot Sauce, ";
+    } else if (ingredient == 2) {
+      document.getElementById("orderResult").innerHTML += "Cheese, ";
+    } else if (ingredient == 3) {
+      document.getElementById("orderResult").innerHTML += "Tomato, ";
+    } else if (ingredient == 4) {
+      document.getElementById("orderResult").innerHTML += "Lettuce, ";
+    } else if (ingredient == 5) {
+      document.getElementById("orderResult").innerHTML += "Pickle, ";
+    } else if (ingredient == 6) {
+      document.getElementById("orderResult").innerHTML += "Bacon, ";
+    } else if (ingredient == 7) {
+      document.getElementById("orderResult").innerHTML += "Ketchup, ";
+    } else if (ingredient == 8) {
+      document.getElementById("orderResult").innerHTML += "Mustard, ";
+    } else if (ingredient == 9) {
+      document.getElementById("orderResult").innerHTML += "Onion, ";
+    } else if (ingredient == 10) {
+      document.getElementById("orderResult").innerHTML += "Fries, ";
+    }
+  }
+}
+
+function topBun() {
+  document.getElementById("orderResult").innerHTML += "Bun, ";
+}
+
+function nextOrder() {
+  document.getElementById("orderResult").innerHTML = "Bun, ";
+  order();
+}
+
+let bunAmount = 10;
+function bunAdd() {
+  if (bunAmount == 10) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 9";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 9) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 8";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 8) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 7";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 7) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 6";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 6) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 5";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 5) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 4";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 4) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 3";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 3) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 2";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 2) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 1";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  } else if (bunAmount == 1) {
+    bunAmount--;
+    document.getElementById("buns").innerHTML = "Buns - 0";
+    document.getElementById("currentBurger").innerHTML += "Bun, ";
+  }
+}
+
+let beefAmount = 5;
+function beefAdd() {
+  if (beefAmount == 5) {
+    beefAmount--;
+    document.getElementById("beef").innerHTML = "Beef - 4";
+    document.getElementById("currentBurger").innerHTML += "Beef, ";
+  } else if (beefAmount == 4) {
+    beefAmount--;
+    document.getElementById("beef").innerHTML = "Beef - 3";
+    document.getElementById("currentBurger").innerHTML += "Beef, ";
+  } else if (beefAmount == 3) {
+    beefAmount--;
+    document.getElementById("beef").innerHTML = "Beef - 2";
+    document.getElementById("currentBurger").innerHTML += "Beef, ";
+  } else if (beefAmount == 2) {
+    beefAmount--;
+    document.getElementById("beef").innerHTML = "Beef - 1";
+    document.getElementById("currentBurger").innerHTML += "Beef, ";
+  } else if (beefAmount == 1) {
+    beefAmount--;
+    document.getElementById("beef").innerHTML = "Beef - 0";
+    document.getElementById("currentBurger").innerHTML += "Beef, ";
+  }
+}
+
+let chickenAmount = 5;
+function chickenAdd() {
+  if (chickenAmount == 5) {
+    chickenAmount--;
+    document.getElementById("chicken").innerHTML = "Chicken - 4";
+    document.getElementById("currentBurger").innerHTML += "Chicken, ";
+  } else if (chickenAmount == 4) {
+    chickenAmount--;
+    document.getElementById("chicken").innerHTML = "Chicken - 3";
+    document.getElementById("currentBurger").innerHTML += "Chicken, ";
+  } else if (chickenAmount == 3) {
+    chickenAmount--;
+    document.getElementById("chicken").innerHTML = "Chicken - 2";
+    document.getElementById("currentBurger").innerHTML += "Chicken, ";
+  } else if (chickenAmount == 2) {
+    chickenAmount--;
+    document.getElementById("chicken").innerHTML = "Chicken - 1";
+    document.getElementById("currentBurger").innerHTML += "Chicken, ";
+  } else if (chickenAmount == 1) {
+    chickenAmount--;
+    document.getElementById("chicken").innerHTML = "Chicken - 0";
+    document.getElementById("currentBurger").innerHTML += "Chicken, ";
+  }
+}
+
+let porkAmount = 5;
+function porkAdd() {
+  if (porkAmount == 5) {
+    porkAmount--;
+    document.getElementById("pork").innerHTML = "Pork - 4";
+    document.getElementById("currentBurger").innerHTML += "Pork, ";
+  } else if (porkAmount == 4) {
+    porkAmount--;
+    document.getElementById("pork").innerHTML = "Pork - 3";
+    document.getElementById("currentBurger").innerHTML += "Pork, ";
+  } else if (porkAmount == 3) {
+    porkAmount--;
+    document.getElementById("pork").innerHTML = "Pork - 2";
+    document.getElementById("currentBurger").innerHTML += "Pork, ";
+  } else if (porkAmount == 2) {
+    porkAmount--;
+    document.getElementById("pork").innerHTML = "Pork - 1";
+    document.getElementById("currentBurger").innerHTML += "Pork, ";
+  } else if (porkAmount == 1) {
+    porkAmount--;
+    document.getElementById("pork").innerHTML = "Pork - 0";
+    document.getElementById("currentBurger").innerHTML += "Pork, ";
+  }
+}
+
+let veganAmount = 5;
+function veganAdd() {
+  if (veganAmount == 5) {
+    veganAmount--;
+    document.getElementById("vegan").innerHTML = "Vegan - 4";
+    document.getElementById("currentBurger").innerHTML += "Vegan, ";
+  } else if (veganAmount == 4) {
+    veganAmount--;
+    document.getElementById("vegan").innerHTML = "Vegan - 3";
+    document.getElementById("currentBurger").innerHTML += "Vegan, ";
+  } else if (veganAmount == 3) {
+    veganAmount--;
+    document.getElementById("vegan").innerHTML = "Vegan - 2";
+    document.getElementById("currentBurger").innerHTML += "Vegan, ";
+  } else if (veganAmount == 2) {
+    veganAmount--;
+    document.getElementById("vegan").innerHTML = "Vegan - 1";
+    document.getElementById("currentBurger").innerHTML += "Vegan, ";
+  } else if (veganAmount == 1) {
+    veganAmount--;
+    document.getElementById("vegan").innerHTML = "Vegan - 0";
+    document.getElementById("currentBurger").innerHTML += "Vegan, ";
+  }
+}
+
+let mayoAmount = 5;
+function mayoAdd() {
+  if (mayoAmount == 5) {
+    mayoAmount--;
+    document.getElementById("mayo").innerHTML = "Mayo - 4";
+    document.getElementById("currentBurger").innerHTML += "Mayo, ";
+  } else if (mayoAmount == 4) {
+    mayoAmount--;
+    document.getElementById("mayo").innerHTML = "Mayo - 3";
+    document.getElementById("currentBurger").innerHTML += "Mayo, ";
+  } else if (mayoAmount == 3) {
+    mayoAmount--;
+    document.getElementById("mayo").innerHTML = "Mayo - 2";
+    document.getElementById("currentBurger").innerHTML += "Mayo, ";
+  } else if (mayoAmount == 2) {
+    mayoAmount--;
+    document.getElementById("mayo").innerHTML = "Mayo - 1";
+    document.getElementById("currentBurger").innerHTML += "Mayo, ";
+  } else if (mayoAmount == 1) {
+    mayoAmount--;
+    document.getElementById("mayo").innerHTML = "Mayo - 0";
+    document.getElementById("currentBurger").innerHTML += "Mayo, ";
+  }
+}
+
+let hotSauceAmount = 5;
+function hotSauceAdd() {
+  if (hotSauceAmount == 5) {
+    hotSauceAmount--;
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 4";
+    document.getElementById("currentBurger").innerHTML += "Hot Sauce, ";
+  } else if (hotSauceAmount == 4) {
+    hotSauceAmount--;
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 3";
+    document.getElementById("currentBurger").innerHTML += "Hot Sauce, ";
+  } else if (hotSauceAmount == 3) {
+    hotSauceAmount--;
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 2";
+    document.getElementById("currentBurger").innerHTML += "Hot Sauce, ";
+  } else if (hotSauceAmount == 2) {
+    hotSauceAmount--;
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 1";
+    document.getElementById("currentBurger").innerHTML += "Hot Sauce, ";
+  } else if (hotSauceAmount == 1) {
+    hotSauceAmount--;
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 0";
+    document.getElementById("currentBurger").innerHTML += "Hot Sauce, ";
+  }
+}
+
+let cheeseAmount = 5;
+function cheeseAdd() {
+  if (cheeseAmount == 5) {
+    cheeseAmount--;
+    document.getElementById("cheese").innerHTML = "Cheese - 4";
+    document.getElementById("currentBurger").innerHTML += "Cheese, ";
+  } else if (cheeseAmount == 4) {
+    cheeseAmount--;
+    document.getElementById("cheese").innerHTML = "Cheese - 3";
+    document.getElementById("currentBurger").innerHTML += "Cheese, ";
+  } else if (cheeseAmount == 3) {
+    cheeseAmount--;
+    document.getElementById("cheese").innerHTML = "Cheese - 2";
+    document.getElementById("currentBurger").innerHTML += "Cheese, ";
+  } else if (cheeseAmount == 2) {
+    cheeseAmount--;
+    document.getElementById("cheese").innerHTML = "Cheese - 1";
+    document.getElementById("currentBurger").innerHTML += "Cheese, ";
+  } else if (cheeseAmount == 1) {
+    cheeseAmount--;
+    document.getElementById("cheese").innerHTML = "Cheese - 0";
+    document.getElementById("currentBurger").innerHTML += "Cheese, ";
+  }
+}
+
+let tomatoAmount = 5
+function tomatoAdd() {
+    if (tomatoAmount == 5) {
+      tomatoAmount--;
+    document.getElementById("tomato").innerHTML = "Tomato - 4"
+    document.getElementById("currentBurger").innerHTML += "Tomato, "
+  } else if (tomatoAmount == 4) {
+    tomatoAmount--;
+    document.getElementById("tomato").innerHTML = "Tomato - 3"
+    document.getElementById("currentBurger").innerHTML += "Tomato, "
+  } else if (tomatoAmount == 3) {
+    tomatoAmount--;
+    document.getElementById("tomato").innerHTML = "Tomato - 2"
+    document.getElementById("currentBurger").innerHTML += "Tomato, "
+  } else if (tomatoAmount == 2) {
+    tomatoAmount--;
+    document.getElementById("tomato").innerHTML = "Tomato - 1"
+    document.getElementById("currentBurger").innerHTML += "Tomato, "
+  } else if (tomatoAmount == 1) {
+    tomatoAmount--;
+    document.getElementById("tomato").innerHTML = "Tomato - 0"
+    document.getElementById("currentBurger").innerHTML += "Tomato, "
+  }
+}
+
+let lettuceAmount = 5
+function lettuceAdd() {
+    if (lettuceAmount == 5) {
+      lettuceAmount--;
+    document.getElementById("lettuce").innerHTML = "Lettuce - 4"
+    document.getElementById("currentBurger").innerHTML += "Lettuce, "
+  } else if (lettuceAmount == 4) {
+    lettuceAmount--;
+    document.getElementById("lettuce").innerHTML = "Lettuce - 3"
+    document.getElementById("currentBurger").innerHTML += "Lettuce, "
+  } else if (lettuceAmount == 3) {
+    lettuceAmount--;
+    document.getElementById("lettuce").innerHTML = "Lettuce - 2"
+    document.getElementById("currentBurger").innerHTML += "Lettuce, "
+  } else if (lettuceAmount == 2) {
+    lettuceAmount--;
+    document.getElementById("lettuce").innerHTML = "Lettuce - 1"
+    document.getElementById("currentBurger").innerHTML += "Lettuce, "
+  } else if (lettuceAmount == 1) {
+    lettuceAmount--;
+    document.getElementById("lettuce").innerHTML = "Lettuce - 0"
+    document.getElementById("currentBurger").innerHTML += "Lettuce, "
+  }
+}
+
+let pickleAmount = 5
+function pickleAdd() {
+    if (pickleAmount == 5) {
+      pickleAmount--;
+    document.getElementById("pickle").innerHTML = "Pickle - 4"
+    document.getElementById("currentBurger").innerHTML += "Pickle, "
+  } else if (pickleAmount == 4) {
+    pickleAmount--;
+    document.getElementById("pickle").innerHTML = "Pickle - 3"
+    document.getElementById("currentBurger").innerHTML += "Pickle, "
+  } else if (pickleAmount == 3) {
+    pickleAmount--;
+    document.getElementById("pickle").innerHTML = "Pickle - 2"
+    document.getElementById("currentBurger").innerHTML += "Pickle, "
+  } else if (pickleAmount == 2) {
+    pickleAmount--;
+    document.getElementById("pickle").innerHTML = "Pickle - 1"
+    document.getElementById("currentBurger").innerHTML += "Pickle, "
+  } else if (pickleAmount == 1) {
+    pickleAmount--;
+    document.getElementById("pickle").innerHTML = "Pickle - 0"
+    document.getElementById("currentBurger").innerHTML += "Pickle, "
+  }
+}
+
+let baconAmount = 5
+function baconAdd() {
+    if (baconAmount == 5) {
+      baconAmount--;
+    document.getElementById("bacon").innerHTML = "Bacon - 4"
+    document.getElementById("currentBurger").innerHTML += "Bacon, "
+  } else if (baconAmount == 4) {
+    baconAmount--;
+    document.getElementById("bacon").innerHTML = "Bacon - 3"
+    document.getElementById("currentBurger").innerHTML += "Bacon, "
+  } else if (baconAmount == 3) {
+    baconAmount--;
+    document.getElementById("bacon").innerHTML = "Bacon - 2"
+    document.getElementById("currentBurger").innerHTML += "Bacon, "
+  } else if (baconAmount == 2) {
+    baconAmount--;
+    document.getElementById("bacon").innerHTML = "Bacon - 1"
+    document.getElementById("currentBurger").innerHTML += "Bacon, "
+  } else if (baconAmount == 1) {
+    baconAmount--;
+    document.getElementById("bacon").innerHTML = "Bacon - 0"
+    document.getElementById("currentBurger").innerHTML += "Bacon, "
+  }
+}
+
+let ketchupAmount = 5
+function ketchupAdd() {
+    if (ketchupAmount == 5) {
+      ketchupAmount--;
+    document.getElementById("ketchup").innerHTML = "Ketchup - 4"
+    document.getElementById("currentBurger").innerHTML += "Ketchup, "
+  } else if (ketchupAmount == 4) {
+    ketchupAmount--;
+    document.getElementById("ketchup").innerHTML = "Ketchup - 3"
+    document.getElementById("currentBurger").innerHTML += "Ketchup, "
+  } else if (ketchupAmount == 3) {
+    ketchupAmount--;
+    document.getElementById("ketchup").innerHTML = "Ketchup - 2"
+    document.getElementById("currentBurger").innerHTML += "Ketchup, "
+  } else if (ketchupAmount == 2) {
+    ketchupAmount--;
+    document.getElementById("ketchup").innerHTML = "Ketchup - 1"
+    document.getElementById("currentBurger").innerHTML += "Ketchup, "
+  } else if (ketchupAmount == 1) {
+    ketchupAmount--;
+    document.getElementById("ketchup").innerHTML = "Ketchup - 0"
+    document.getElementById("currentBurger").innerHTML += "Ketchup, "
+  }
+}
+
+let mustardAmount = 5
+function mustardAdd() {
+    if (mustardAmount == 5) {
+      mustardAmount--;
+    document.getElementById("mustard").innerHTML = "Mustard - 4"
+    document.getElementById("currentBurger").innerHTML += "Mustard, "
+  } else if (mustardAmount == 4) {
+    mustardAmount--;
+    document.getElementById("mustard").innerHTML = "Mustard - 3"
+    document.getElementById("currentBurger").innerHTML += "Mustard, "
+  } else if (mustardAmount == 3) {
+    mustardAmount--;
+    document.getElementById("mustard").innerHTML = "Mustard - 2"
+    document.getElementById("currentBurger").innerHTML += "Mustard, "
+  } else if (mustardAmount == 2) {
+    mustardAmount--;
+    document.getElementById("mustard").innerHTML = "Mustard - 1"
+    document.getElementById("currentBurger").innerHTML += "Mustard, "
+  } else if (mustardAmount == 1) {
+    mustardAmount--;
+    document.getElementById("mustard").innerHTML = "Mustard - 0"
+    document.getElementById("currentBurger").innerHTML += "Mustard, "
+  }
+}
+
+let onionAmount = 5
+function onionAdd() {
+    if (onionAmount == 5) {
+      onionAmount--;
+    document.getElementById("onion").innerHTML = "Onion - 4"
+    document.getElementById("currentBurger").innerHTML += "Onion, "
+  } else if (onionAmount == 4) {
+    onionAmount--;
+    document.getElementById("onion").innerHTML = "Onion - 3"
+    document.getElementById("currentBurger").innerHTML += "Onion, "
+  } else if (onionAmount == 3) {
+    onionAmount--;
+    document.getElementById("onion").innerHTML = "Onion - 2"
+    document.getElementById("currentBurger").innerHTML += "Onion, "
+  } else if (onionAmount == 2) {
+    onionAmount--;
+    document.getElementById("onion").innerHTML = "Onion - 1"
+    document.getElementById("currentBurger").innerHTML += "Onion, "
+  } else if (onionAmount == 1) {
+    onionAmount--;
+    document.getElementById("onion").innerHTML = "Onion - 0"
+    document.getElementById("currentBurger").innerHTML += "Onion, "
+  }
+}
+
+let friesAmount = 5
+function friesAdd() {
+    if (friesAmount == 5) {
+      friesAmount--;
+    document.getElementById("fries").innerHTML = "Fries - 4"
+    document.getElementById("currentBurger").innerHTML += "Fries, "
+  } else if (friesAmount == 4) {
+    friesAmount--;
+    document.getElementById("fries").innerHTML = "Fries - 3"
+    document.getElementById("currentBurger").innerHTML += "Fries, "
+  } else if (friesAmount == 3) {
+    friesAmount--;
+    document.getElementById("fries").innerHTML = "Fries - 2"
+    document.getElementById("currentBurger").innerHTML += "Fries, "
+  } else if (friesAmount == 2) {
+    friesAmount--;
+    document.getElementById("fries").innerHTML = "Fries - 1"
+    document.getElementById("currentBurger").innerHTML += "Fries, "
+  } else if (friesAmount == 1) {
+    friesAmount--;
+    document.getElementById("fries").innerHTML = "Fries - 0"
+    document.getElementById("currentBurger").innerHTML += "Fries, "
+  }
+}
+
+function completeOrder() {
+  if (document.getElementById("orderResult").innerHTML == document.getElementById("currentBurger").innerHTML) {
+    alert("yes!")
+    document.getElementById("currentBurger").innerHTML = "";
+    nextOrder();
+  } else {
+    alert("no!")
+    document.getElementById("currentBurger").innerHTML = "";
+    nextOrder();
+  }
+}
