@@ -1,0 +1,166 @@
+#orderResult {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 500px;
+  height: 20px;
+  text-align: center;
+}
+
+#currentBurger {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+  height: auto;
+}
+
+#beef {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#buns {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#chicken {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#pork {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#vegan {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#mayo {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#hotSauce {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#cheese {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#tomato {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#lettuce {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#pickle {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#bacon {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#ketchup {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#mustard {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#onion {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#fries {
+  border: 2px solid black;
+  width: 120px;
+  font-size:20px;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#cash {
+  border: 2px solid black;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
