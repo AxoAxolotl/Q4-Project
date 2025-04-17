@@ -55,6 +55,7 @@ function topBun() {
 
 function nextOrder() {
   document.getElementById("orderResult").innerHTML = "Bun, ";
+  document.getElementById("currentBurger").innerHTML = ""
   order();
 }
 
@@ -478,14 +479,658 @@ function friesAdd() {
   }
 }
 
+let total = 0; 
+
 function completeOrder() {
+  let thanks = Math.floor(Math.random() * 4);
+  
   if (document.getElementById("orderResult").innerHTML == document.getElementById("currentBurger").innerHTML) {
-    alert("yes!")
+    if (thanks == 0) {
+      alert("That looks delicious! Thank you!")
+    } else if (thanks == 1) {
+      alert("Thanks!")
+    } else if (thanks == 2) {
+      alert("I can't wait to eat this!")
+    } else if (thanks == 3) {
+      alert("Yummy!")
+    }
+  orderLength = document.getElementById("currentBurger").innerHTML;
+  let orderTotal = (orderLength.split(',').length - 1)*2;
+  total += orderTotal; 
+  document.getElementById("cash").innerHTML = "$" + total; 
     document.getElementById("currentBurger").innerHTML = "";
     nextOrder();
   } else {
-    alert("no!")
+    alert("That's wrong!")
     document.getElementById("currentBurger").innerHTML = "";
     nextOrder();
   }
+  ranks();
 }
+
+function restockBeef() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (beefAmount == 5) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    beefAmount = 5;
+  } else if (beefAmount == 4) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    beefAmount = 5;
+  } else if (beefAmount == 3) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    beefAmount = 5;
+  } else if (beefAmount == 2) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    total -= 12
+    document.getElementById("cash").innerHTML = "$" + total;
+    beefAmount = 5;
+  } else if (beefAmount == 1) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    total -= 16
+    document.getElementById("cash").innerHTML = "$" + total;
+    beefAmount = 5;
+  } else if (beefAmount == 0) {
+    document.getElementById("beef").innerHTML = "Beef - 5";
+    total -= 20
+    document.getElementById("cash").innerHTML = "$" + total;
+    beefAmount = 5;
+  } 
+  }
+}
+
+function restockChicken() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (chickenAmount == 5) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    chickenAmount = 5;
+  } else if (chickenAmount == 4) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    chickenAmount = 5;
+  } else if (chickenAmount == 3) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    chickenAmount = 5;
+  } else if (chickenAmount == 2) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    chickenAmount = 5;
+  } else if (chickenAmount == 1) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    chickenAmount = 5;
+  } else if (chickenAmount == 0) {
+    document.getElementById("chicken").innerHTML = "Chicken - 5";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    chickenAmount = 5;
+  } 
+  }
+}
+
+function restockPork() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (porkAmount == 5) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    porkAmount = 5;
+  } else if (porkAmount == 4) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    porkAmount = 5;
+  } else if (porkAmount == 3) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    porkAmount = 5;
+  } else if (porkAmount == 2) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    total -= 9
+    document.getElementById("cash").innerHTML = "$" + total;
+    porkAmount = 5;
+  } else if (porkAmount == 1) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    total -= 12
+    document.getElementById("cash").innerHTML = "$" + total;
+    porkAmount = 5;
+  } else if (porkAmount == 0) {
+    document.getElementById("pork").innerHTML = "Pork - 5";
+    total -= 15
+    document.getElementById("cash").innerHTML = "$" + total;
+    porkAmount = 5;
+  } 
+  }
+}
+
+function restockVegan() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (veganAmount == 5) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    veganAmount = 5;
+  } else if (veganAmount == 4) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    veganAmount = 5;
+  } else if (veganAmount == 3) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    veganAmount = 5;
+  } else if (veganAmount == 2) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    veganAmount = 5;
+  } else if (veganAmount == 1) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    veganAmount = 5;
+  } else if (veganAmount == 0) {
+    document.getElementById("vegan").innerHTML = "Vegan - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    veganAmount = 5;
+  } 
+  }
+}
+
+function restockMayo() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (mayoAmount == 5) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    mayoAmount = 5;
+  } else if (mayoAmount == 4) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    mayoAmount = 5;
+  } else if (mayoAmount == 3) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    mayoAmount = 5;
+  } else if (mayoAmount == 2) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    mayoAmount = 5;
+  } else if (mayoAmount == 1) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    mayoAmount = 5;
+  } else if (mayoAmount == 0) {
+    document.getElementById("mayo").innerHTML = "Mayo - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    mayoAmount = 5;
+  } 
+  }
+}
+
+function restockHotSauce() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (hotSauceAmount == 5) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    hotSauceAmount = 5;
+  } else if (hotSauceAmount == 4) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    hotSauceAmount = 5;
+  } else if (hotSauceAmount == 3) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    hotSauceAmount = 5;
+  } else if (hotSauceAmount == 2) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    hotSauceAmount = 5;
+  } else if (hotSauceAmount == 1) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    hotSauceAmount = 5;
+  } else if (hotSauceAmount == 0) {
+    document.getElementById("hotSauce").innerHTML = "Hot Sauce - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    hotSauceAmount = 5;
+  } 
+  }
+}
+
+function restockCheese() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (cheeseAmount == 5) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    cheeseAmount = 5;
+  } else if (cheeseAmount == 4) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    cheeseAmount = 5;
+  } else if (cheeseAmount == 3) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    cheeseAmount = 5;
+  } else if (cheeseAmount == 2) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    cheeseAmount = 5;
+  } else if (cheeseAmount == 1) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    cheeseAmount = 5;
+  } else if (cheeseAmount == 0) {
+    document.getElementById("cheese").innerHTML = "Cheese - 5";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    cheeseAmount = 5;
+  } 
+  }
+}
+
+function restockTomato() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (tomatoAmount == 5) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    tomatoAmount = 5;
+  } else if (tomatoAmount == 4) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    tomatoAmount = 5;
+  } else if (tomatoAmount == 3) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    tomatoAmount = 5;
+  } else if (tomatoAmount == 2) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    tomatoAmount = 5;
+  } else if (tomatoAmount == 1) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    tomatoAmount = 5;
+  } else if (tomatoAmount == 0) {
+    document.getElementById("tomato").innerHTML = "Tomato - 5";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    tomatoAmount = 5;
+  } 
+  }
+}
+
+function restockLettuce() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (lettuceAmount == 5) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    lettuceAmount = 5;
+  } else if (lettuceAmount == 4) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    lettuceAmount = 5;
+  } else if (lettuceAmount == 3) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    lettuceAmount = 5;
+  } else if (lettuceAmount == 2) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    lettuceAmount = 5;
+  } else if (lettuceAmount == 1) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    lettuceAmount = 5;
+  } else if (lettuceAmount == 0) {
+    document.getElementById("lettuce").innerHTML = "Lettuce - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    lettuceAmount = 5;
+  } 
+  }
+}
+
+function restockPickle() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (pickleAmount == 5) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    pickleAmount = 5;
+  } else if (pickleAmount == 4) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    pickleAmount = 5;
+  } else if (pickleAmount == 3) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    pickleAmount = 5;
+  } else if (pickleAmount == 2) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    pickleAmount = 5;
+  } else if (pickleAmount == 1) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    pickleAmount = 5;
+  } else if (pickleAmount == 0) {
+    document.getElementById("pickle").innerHTML = "Pickle - 5";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    pickleAmount = 5;
+  } 
+  }
+}
+
+function restockBacon() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (baconAmount == 5) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    baconAmount = 5;
+  } else if (baconAmount == 4) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    baconAmount = 5;
+  } else if (baconAmount == 3) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    baconAmount = 5;
+  } else if (baconAmount == 2) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    total -= 9
+    document.getElementById("cash").innerHTML = "$" + total;
+    baconAmount = 5;
+  } else if (baconAmount == 1) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    total -= 12
+    document.getElementById("cash").innerHTML = "$" + total;
+    baconAmount = 5;
+  } else if (baconAmount == 0) {
+    document.getElementById("bacon").innerHTML = "Bacon - 5";
+    total -= 15
+    document.getElementById("cash").innerHTML = "$" + total;
+    baconAmount = 5;
+  } 
+  }
+}
+
+function restockKetchup() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (ketchupAmount == 5) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    ketchupAmount = 5;
+  } else if (ketchupAmount == 4) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    ketchupAmount = 5;
+  } else if (ketchupAmount == 3) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    ketchupAmount = 5;
+  } else if (ketchupAmount == 2) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    ketchupAmount = 5;
+  } else if (ketchupAmount == 1) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    ketchupAmount = 5;
+  } else if (ketchupAmount == 0) {
+    document.getElementById("ketchup").innerHTML = "Ketchup - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    ketchupAmount = 5;
+  } 
+  }
+}
+
+function restockMustard() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (mustardAmount == 5) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    mustardAmount = 5;
+  } else if (mustardAmount == 4) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    mustardAmount = 5;
+  } else if (mustardAmount == 3) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    mustardAmount = 5;
+  } else if (mustardAmount == 2) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    mustardAmount = 5;
+  } else if (mustardAmount == 1) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    mustardAmount = 5;
+  } else if (mustardAmount == 0) {
+    document.getElementById("mustard").innerHTML = "Mustard - 5";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    mustardAmount = 5;
+  } 
+  }
+}
+
+function restockOnion() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (onionAmount == 5) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    onionAmount = 5;
+  } else if (onionAmount == 4) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    onionAmount = 5;
+  } else if (onionAmount == 3) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    onionAmount = 5;
+  } else if (onionAmount == 2) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    onionAmount = 5;
+  } else if (onionAmount == 1) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    onionAmount = 5;
+  } else if (onionAmount == 0) {
+    document.getElementById("onion").innerHTML = "Onion - 5";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    onionAmount = 5;
+  } 
+  }
+}
+
+function restockFries() {
+  if (total < 1) {
+    alert("Not enough money!")
+  } else {
+  if (friesAmount == 5) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    friesAmount = 5;
+  } else if (friesAmount == 4) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    friesAmount = 5;
+  } else if (friesAmount == 3) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    friesAmount = 5;
+  } else if (friesAmount == 2) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    total -= 9
+    document.getElementById("cash").innerHTML = "$" + total;
+    friesAmount = 5;
+  } else if (friesAmount == 1) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    total -= 12
+    document.getElementById("cash").innerHTML = "$" + total;
+    friesAmount = 5;
+  } else if (friesAmount == 0) {
+    document.getElementById("fries").innerHTML = "Fries - 5";
+    total -= 15
+    document.getElementById("cash").innerHTML = "$" + total;
+    friesAmount = 5;
+  } 
+  }
+}
+
+function restockBun() {
+    if (total < 1) {
+    alert("Not enough money!")
+  } else {
+    if (bunAmount == 10) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    bunAmount = 10;
+  } else if (bunAmount == 9) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 1
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 8) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 2
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 7) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 3
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 6) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 4
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 5) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 5
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 4) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 6
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 3) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 7
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 2) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 8
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 1) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 9
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  } else if (bunAmount == 0) {
+    document.getElementById("buns").innerHTML = "Bun - 10";
+    total -= 10
+    document.getElementById("cash").innerHTML = "$" + total;
+    bunAmount = 10;
+  }
+  }
+}
+
+function ranks() {
+  if (total < 1) {
+    document.getElementById("yourRank").innerHTML = "Bankrupt"
+  } else if ((total > 1) && (total < 25)) {;
+  document.getElementById("yourRank").innerHTML = "Broke"
+  } else if ((total > 25) && (total < 100)) {;
+  document.getElementById("yourRank").innerHTML = "Poor"
+  } else if ((total > 100) && (total < 200)) {;
+  document.getElementById("yourRank").innerHTML = "Bad"
+  } else if ((total > 200) && (total < 500)) {;
+  document.getElementById("yourRank").innerHTML = "Okay"
+  } else if ((total > 500) && (total < 1000)) {;
+  document.getElementById("yourRank").innerHTML = "Average"
+  } else if ((total > 1000) && (total < 3000)) {;
+  document.getElementById("yourRank").innerHTML = "Good"
+  } else if ((total > 3000) && (total < 7500)) {;
+  document.getElementById("yourRank").innerHTML = "Rich"
+  } else if ((total > 7500) && (total < 15000)) {;
+  document.getElementById("yourRank").innerHTML = "Wealthy"
+  } else if (total > 15000) {
+  document.getElementById("yourRank").innerHTML = "Royalty"
+  }
+}
+
+ranks();
