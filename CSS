@@ -2,6 +2,7 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #orderResult {
@@ -28,6 +29,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #7A4C28;
 }
 
 #buns {
@@ -37,6 +39,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #E3B271;
 }
 
 #chicken {
@@ -46,6 +49,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #F5D189;
 }
 
 #pork {
@@ -55,6 +59,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #E33B4C;
 }
 
 #vegan {
@@ -64,6 +69,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #727530;
 }
 
 #mayo {
@@ -73,15 +79,17 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #FDFDFD;
 }
 
 #hotSauce {
   border: 2px solid black;
   width: 120px;
-  font-size:20px;
+  font-size:19px;
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #D5290D;
 }
 
 #cheese {
@@ -91,6 +99,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #F0AC02;
 }
 
 #tomato {
@@ -100,6 +109,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #F0262A;
 }
 
 #lettuce {
@@ -109,6 +119,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #299E2D;
 }
 
 #pickle {
@@ -118,6 +129,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #699C3D;
 }
 
 #bacon {
@@ -127,6 +139,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #A13716;
 }
 
 #ketchup {
@@ -136,6 +149,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #CF0404;
 }
 
 #mustard {
@@ -145,6 +159,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #CC9E12;
 }
 
 #onion {
@@ -154,6 +169,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #C96CE6;
 }
 
 #fries {
@@ -163,6 +179,7 @@
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  background-color: #E3B35F;
 }
 
 #cash {
@@ -170,4 +187,40 @@
   width: 100px;
   height: 20px;
   text-align: center;
+  background-color: #009900;
+}
+
+#yourRank {
+  width: 150px;
+  height: 30px;
+  font-size: 25px;
+}
+
+#completed {
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+  background-color: #4FDB18;
+  color: white;
+  border: 8px solid #189DDB;
+  border-radius: 25px;
+}
+
+#restockButton {
+  height: 40px;
+  width: 124px;
+  border: 2px solid black;
+  font-size: 15px;
+}
+
+body {
+  background-color: #FFFFFF
+}
+
+#currentBurger {
+  background-color: #FFFFFF
+}
+
+#orderResult {
+  background-color: #FFFFFF
 }
