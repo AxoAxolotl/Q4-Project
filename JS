@@ -1111,26 +1111,161 @@ function restockBun() {
 
 function ranks() {
   if (total < 1) {
-    document.getElementById("yourRank").innerHTML = "Bankrupt"
+    document.getElementById("yourRank").innerHTML = "Bankrupt";
+    document.getElementById("yourRank").style.border = "2px solid black";
+    document.getElementById("yourRank").style.backgroundColor = "#505050";
   } else if ((total > 1) && (total < 25)) {;
   document.getElementById("yourRank").innerHTML = "Broke"
+  document.getElementById("yourRank").style.border = "2px solid black";
+  document.getElementById("yourRank").style.backgroundColor = "#909090";
   } else if ((total > 25) && (total < 100)) {;
   document.getElementById("yourRank").innerHTML = "Poor"
+  document.getElementById("yourRank").style.border = "2px solid black";
+  document.getElementById("yourRank").style.backgroundColor = "#B5B5B5";
   } else if ((total > 100) && (total < 200)) {;
   document.getElementById("yourRank").innerHTML = "Bad"
+  document.getElementById("yourRank").style.border = "2px solid black";
+  document.getElementById("yourRank").style.backgroundColor = "#FFFFFF";
   } else if ((total > 200) && (total < 500)) {;
   document.getElementById("yourRank").innerHTML = "Okay"
+  document.getElementById("yourRank").style.border = "2px solid black";
+  document.getElementById("yourRank").style.backgroundColor = "#50C050";
+  document.getElementById("yourRank").style.borderRadius = "5px";
   } else if ((total > 500) && (total < 1000)) {;
   document.getElementById("yourRank").innerHTML = "Average"
+  document.getElementById("yourRank").style.border = "4px solid #E8B323";
+  document.getElementById("yourRank").style.backgroundColor = "#9090E0";
+  document.getElementById("yourRank").style.borderRadius = "15px";
   } else if ((total > 1000) && (total < 3000)) {;
   document.getElementById("yourRank").innerHTML = "Good"
+  document.getElementById("yourRank").style.border = "4px solid #E8B323";
+  document.getElementById("yourRank").style.backgroundColor = "#9090E0";
+  document.getElementById("yourRank").style.borderRadius = "15px";
   } else if ((total > 3000) && (total < 7500)) {;
   document.getElementById("yourRank").innerHTML = "Rich"
+  document.getElementById("yourRank").style.border = "4px solid #E8B323";
+  document.getElementById("yourRank").style.backgroundColor = "#9090E0";
+  document.getElementById("yourRank").style.borderRadius = "15px";
+  document.getElementById("yourRank").style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)"
   } else if ((total > 7500) && (total < 15000)) {;
   document.getElementById("yourRank").innerHTML = "Wealthy"
+  document.getElementById("yourRank").style.border = "4px solid #7D1CC7";
+  document.getElementById("yourRank").style.backgroundColor = "#9090E0";
+  document.getElementById("yourRank").style.borderRadius = "15px";
+  document.getElementById("yourRank").style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)"
+  document.getElementById("yourRank").style.color = "#FF0000";
   } else if (total > 15000) {
   document.getElementById("yourRank").innerHTML = "Royalty"
+  document.getElementById("yourRank").style.border = "4px solid #7D1CC7";
+  document.getElementById("yourRank").style.backgroundColor = "#FF0000";
+  document.getElementById("yourRank").style.borderRadius = "15px";
+  document.getElementById("yourRank").style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)"
+  document.getElementById("yourRank").style.color = "#9090E0";
   }
 }
 
 ranks();
+
+function backgroundWhite() {
+  document.body.style.backgroundColor = "#FFFFFF";
+  document.body.style.background = "rgba(0, 0, 0, 0)";
+}
+
+function backgroundBlue() {
+  if (total < 5) {
+    alert("Not enough money!")
+  } else {
+  total -= 5;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(0, 0, 255, 1)";
+  ranks();
+  }
+}
+
+function backgroundRed() {
+  if (total < 5) {
+    alert("Not enough money!")
+  } else {
+  total -= 5;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(255, 0, 0, 1)";
+  ranks();
+  }
+}
+
+function backgroundGreen() {
+  if (total < 5) {
+    alert("Not enough money!")
+  } else {
+  total -= 5;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(0, 255, 0, 1)";
+  ranks();
+  }
+}
+
+function backgroundBlack() {
+  if (total < 10) {
+    alert("Not enough money!")
+  } else {
+  total -= 10;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(0, 0, 0, 1)";
+  ranks();
+  }
+}
+
+function backgroundPurple() {
+  if (total < 25) {
+    alert("Not enough money!")
+  } else {
+  total -= 25;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(255, 255, 0, 1)";
+  ranks();
+  }
+}
+
+function backgroundOrange() {
+  if (total < 25) {
+    alert("Not enough money!")
+  } else {
+  total -= 25;
+  document.getElementById("cash").innerHTML = "$" + total;
+  document.body.style.background = "rgba(255, 125, 0, 1)";
+  ranks();
+  }
+}
+
+function backgroundBronze() {
+  if (total < 50) {
+    alert("Not enough money!")
+  } else {
+  total -= 50;
+  document.body.style.background = "linear-gradient(163deg, rgb(140 80 33) 0%, rgb(113 126 98) 35%, rgb(163 86 12) 100%)";
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  }
+}
+
+function backgroundSilver() {
+  if (total < 100) {
+    alert("Not enough money!")
+  } else {
+  total -= 100;
+  document.body.style.background = "linear-gradient(163deg, rgb(134 133 133) 0%, rgb(193 193 193) 35%, rgb(138 138 138) 100%)";
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  }
+}
+
+function backgroundGold() {
+  if (total < 250) {
+    alert("Not enough money!")
+  } else {
+  total -= 250;
+  document.body.style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)";
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  }
+}
