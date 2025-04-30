@@ -1,3 +1,4 @@
+<div id="userBackground">
 <div id="yourRank"></div>
 <br>
 <div id="cash">$0</div>
@@ -11,43 +12,59 @@
 <table id="ingredients">
   <tr>
 <td><div id="buns" onClick="bunAdd();">Buns - 10</div>
-  <button onClick="restockBun();">Restock Buns</button></td>
+  <button id="restockButton" onClick="restockBun();">Restock Buns</button></td>
 <td><div id="beef" onClick="beefAdd();">Beef - 5</div>
-  <button onClick="restockBeef();">Restock Beef</button></td>
+  <button id="restockButton" onClick="restockBeef();">Restock Beef</button></td>
 <td><div id="chicken" onClick="chickenAdd();">Chicken - 5</div>
-  <button onClick="restockChicken();">Restock Chicken</button></td>
+  <button id="restockButton" onClick="restockChicken();">Restock Chicken</button></td>
 <td><div id="pork" onClick="porkAdd();">Pork - 5</div>
-  <button onClick="restockPork();">Restock Pork</button></td>
+  <button id="restockButton" onClick="restockPork();">Restock Pork</button></td>
   </tr>
   <tr>
 <td><div id="vegan" onClick="veganAdd();">Vegan - 5</div>
-  <button onClick="restockVegan();">Restock Vegan</button></td>
+  <button id="restockButton" onClick="restockVegan();">Restock Vegan</button></td>
 <td><div id="mayo" onClick="mayoAdd();">Mayo - 5</div>
-  <button onClick="restockMayo();">Restock Mayo</button></td>
+  <button id="restockButton" onClick="restockMayo();">Restock Mayo</button></td>
 <td><div id="hotSauce" onClick="hotSauceAdd();">Hot Sauce - 5</div>
-  <button onClick="restockHotSauce();">Restock Hot Sauce</button></td>
+  <button id="restockButton" onClick="restockHotSauce();">Restock Hot Sauce</button></td>
 <td><div id="cheese" onClick="cheeseAdd();">Cheese - 5</div>
-  <button onClick="restockCheese();">Restock Cheese</button></td>
+  <button id="restockButton" onClick="restockCheese();">Restock Cheese</button></td>
   </tr>
   <tr>
 <td><div id="tomato" onClick="tomatoAdd();">Tomato - 5</div>
-  <button onClick="restockTomato();">Restock Tomato</button></td>
+  <button id="restockButton" onClick="restockTomato();">Restock Tomato</button></td>
 <td><div id="lettuce" onClick="lettuceAdd();">Lettuce - 5</div>
-  <button onClick="restockLettuce();">Restock Lettuce</button></td>
+  <button id="restockButton" onClick="restockLettuce();">Restock Lettuce</button></td>
 <td><div id="pickle" onClick="pickleAdd();">Pickle - 5</div>
-  <button onClick="restockPickle();">Restock Pickle</button></td>
+  <button id="restockButton" onClick="restockPickle();">Restock Pickle</button></td>
 <td><div id="bacon" onClick="baconAdd();">Bacon - 5</div>
-  <button onClick="restockBacon();">Restock Bacon</button></td>
+  <button id="restockButton" onClick="restockBacon();">Restock Bacon</button></td>
   </tr>
   <tr>
 <td><div id="ketchup" onClick="ketchupAdd();">Ketchup - 5</div>
-  <button onClick="restockKetchup();">Restock Ketchup</button></td>
+  <button id="restockButton" onClick="restockKetchup();">Restock Ketchup</button></td>
  <td><div id="mustard" onClick="mustardAdd();">Mustard - 5</div>
-  <button onClick="restockMustard();">Restock Mustard</button></td>
+  <button id="restockButton" onClick="restockMustard();">Restock Mustard</button></td>
 <td><div id="onion" onClick="onionAdd();">Onion - 5</div>
-  <button onClick="restockOnion();">Restock Onion</button></td>
+  <button id="restockButton" onClick="restockOnion();">Restock Onion</button></td>
 <td><div id="fries" onClick="friesAdd();">Fries - 5</div>
-  <button onClick="restockFries();">Restock Fries</button></td>
+  <button id="restockButton" onClick="restockFries();">Restock Fries</button></td>
   </tr>
 </table>
-<button id="completed" onClick="completeOrder();">Serve Burger</button>
+  <br>
+<button id="completed" onClick="completeOrder();">SERVE BURGER</button>
+  <br>
+  <br>
+<div id="decorations">
+  <p>Backgrounds:</p>
+  <button onClick="backgroundWhite();">White - $0</button>
+  <button onClick="backgroundBlue();">Blue - $5</button>
+  <button onClick="backgroundRed();">Red - $5</button>
+  <button onClick="backgroundGreen();">Green - $5</button>
+  <button onClick="backgroundBlack();">Black - $10</button>
+  <button onClick="backgroundPurple();">Purple - $25</button>
+  <button onClick="backgroundOrange();">Orange - $25</button>
+  <button onClick="backgroundBronze();">Bronze - $50</button>
+  <button onClick="backgroundSilver();">Silver - $100</button>
+  <button onClick="backgroundGold();">Gold - $250</button>
+  </div>
