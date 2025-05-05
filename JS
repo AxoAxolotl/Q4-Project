@@ -483,6 +483,7 @@ let total = 0;
 
 function completeOrder() {
   let thanks = Math.floor(Math.random() * 4);
+  let events = Math.floor(Math.random() * 50);
   
   if (document.getElementById("orderResult").innerHTML == document.getElementById("currentBurger").innerHTML) {
     if (thanks == 0) {
@@ -504,6 +505,19 @@ function completeOrder() {
     alert("That's wrong!")
     document.getElementById("currentBurger").innerHTML = "";
     nextOrder();
+  }
+  if (events == 0) {
+    mouse();
+  } else if (events == 1) {
+    mold();
+  } else if (events == 2) {
+    robbery();
+  } else if (events == 3) {
+    angryCustomer();
+  } else if (events == 4) {
+    cleanUp();
+  } else if (events == 5) {
+    tip();
   }
   ranks();
 }
@@ -1134,7 +1148,7 @@ function ranks() {
   } else if ((total > 500) && (total < 1000)) {;
   document.getElementById("yourRank").innerHTML = "Average"
   document.getElementById("yourRank").style.border = "4px solid #E8B323";
-  document.getElementById("yourRank").style.backgroundColor = "#9090E0";
+  document.getElementById("yourRank").style.backgroundColor = "#50C050";
   document.getElementById("yourRank").style.borderRadius = "15px";
   } else if ((total > 1000) && (total < 3000)) {;
   document.getElementById("yourRank").innerHTML = "Good"
@@ -1172,10 +1186,10 @@ function backgroundWhite() {
 }
 
 function backgroundBlue() {
-  if (total < 5) {
+  if (total < 20) {
     alert("Not enough money!")
   } else {
-  total -= 5;
+  total -= 20;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 0, 255, 1)";
   ranks();
@@ -1183,10 +1197,10 @@ function backgroundBlue() {
 }
 
 function backgroundRed() {
-  if (total < 5) {
+  if (total < 20) {
     alert("Not enough money!")
   } else {
-  total -= 5;
+  total -= 20;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(255, 0, 0, 1)";
   ranks();
@@ -1194,10 +1208,10 @@ function backgroundRed() {
 }
 
 function backgroundGreen() {
-  if (total < 5) {
+  if (total < 20) {
     alert("Not enough money!")
   } else {
-  total -= 5;
+  total -= 20;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 255, 0, 1)";
   ranks();
@@ -1205,10 +1219,10 @@ function backgroundGreen() {
 }
 
 function backgroundBlack() {
-  if (total < 10) {
+  if (total < 50) {
     alert("Not enough money!")
   } else {
-  total -= 10;
+  total -= 50;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 0, 0, 1)";
   ranks();
@@ -1216,21 +1230,21 @@ function backgroundBlack() {
 }
 
 function backgroundPurple() {
-  if (total < 25) {
+  if (total < 100) {
     alert("Not enough money!")
   } else {
-  total -= 25;
+  total -= 100;
   document.getElementById("cash").innerHTML = "$" + total;
-  document.body.style.background = "rgba(255, 255, 0, 1)";
+  document.body.style.background = "rgba(255, 0, 255, 1)";
   ranks();
   }
 }
 
 function backgroundOrange() {
-  if (total < 25) {
+  if (total < 100) {
     alert("Not enough money!")
   } else {
-  total -= 25;
+  total -= 100;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(255, 125, 0, 1)";
   ranks();
@@ -1238,10 +1252,10 @@ function backgroundOrange() {
 }
 
 function backgroundBronze() {
-  if (total < 50) {
+  if (total < 250) {
     alert("Not enough money!")
   } else {
-  total -= 50;
+  total -= 250;
   document.body.style.background = "linear-gradient(163deg, rgb(140 80 33) 0%, rgb(113 126 98) 35%, rgb(163 86 12) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
@@ -1249,10 +1263,10 @@ function backgroundBronze() {
 }
 
 function backgroundSilver() {
-  if (total < 100) {
+  if (total < 500) {
     alert("Not enough money!")
   } else {
-  total -= 100;
+  total -= 500;
   document.body.style.background = "linear-gradient(163deg, rgb(134 133 133) 0%, rgb(193 193 193) 35%, rgb(138 138 138) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
@@ -1260,12 +1274,81 @@ function backgroundSilver() {
 }
 
 function backgroundGold() {
-  if (total < 250) {
+  if (total < 1000) {
     alert("Not enough money!")
   } else {
-  total -= 250;
+  total -= 1000;
   document.body.style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
   }
+}
+
+function openVault() {
+  let VaultCode = prompt("Enter Code");
+  
+  if (VaultCode == ":3") {
+    let customCash = prompt("Enter Amount")
+    total = total + parseInt(customCash)
+    document.getElementById("cash").innerHTML = "$" + total;
+    ranks();
+  } else {
+    alert("INCORRECT")
+  }
+}
+
+function mouse() {
+  cheeseAmount = 0;
+  document.getElementById("cheese").innerHTML = "Cheese - 0";
+  alert("A mouse has eaten all your cheese")
+}
+
+function mold() {
+  bunAmount = 0;
+  document.getElementById("buns").innerHTML = "Buns - 0";
+  alert("All your buns got moldy")
+}
+
+function angryCustomer() {
+  alert("Excuse me!")
+  alert("My order was wrong!")
+  alert("I asked for two pickles,")
+  alert("But I only got one!")
+  alert("I will sue you for this!")
+  alert("You will be locked up for life!")
+  alert("Maybe even death by firing squad!")
+  alert("Apologize now!")
+  let response = prompt("Give an apology")
+  alert(response + " is not a valid answer!")
+  alert("I am leaving to call the police!")
+  alert("You'll never see me or my money again!")
+  alert("G")
+  alert("O")
+  alert("O")
+  alert("D")
+  alert("B")
+  alert("Y")
+  alert("E")
+  alert("!")
+}
+
+function robbery() {
+  total -= Math.floor(Math.random() * 30) + 20;
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  alert("You got robbed!")
+}
+
+function cleanUp() {
+  total -= 20
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  alert("There was a big mess, and you have to pay to clean it up.")
+}
+
+function tip() {
+  total += Math.floor(Math.random() * 10);
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  alert("You got a tip!")
 }
