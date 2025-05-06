@@ -224,3 +224,17 @@ body {
 #orderResult {
   background-color: #FFFFFF
 }
+
+#load {
+  height: 40px;
+  width: 124px;
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+#save {
+  height: 40px;
+  width: 124px;
+  border: 2px solid black;
+  font-size: 20px;
+}
