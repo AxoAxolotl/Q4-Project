@@ -1352,3 +1352,13 @@ function tip() {
   ranks();
   alert("You got a tip!")
 }
+
+function load() {
+  localStorage.setItem("savedMoney", total);
+}
+
+function saving() {
+  total = Number(localStorage.getItem("savedMoney"));
+  document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+}
