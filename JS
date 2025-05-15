@@ -480,6 +480,7 @@ function friesAdd() {
 }
 
 let total = 0; 
+let burgersSold = 0;
 
 function completeOrder() {
   let thanks = Math.floor(Math.random() * 4);
@@ -501,6 +502,61 @@ function completeOrder() {
   document.getElementById("cash").innerHTML = "$" + total; 
     document.getElementById("currentBurger").innerHTML = "";
     nextOrder();
+    
+    if(hasNeonSign == true) {
+      total += 2
+      document.getElementById("cash").innerHTML = "$" + total;
+    } else if(hasNeonSign == false) {
+      
+    }
+    
+    let orderType = Math.floor(Math.random() * 5);
+    if(hasDelivery == true) {
+      if(orderType == 1) {
+        total += 10
+        document.getElementById("cash").innerHTML = "$" + total;
+      } else {
+        
+      }
+    } else if(hasDelivery == false) {
+      
+    }
+    
+    if(hasDriveThru == true) {
+      if(orderType == 2) {
+        total += 35
+        document.getElementById("cash").innerHTML = "$" + total;
+      } else {
+        
+      }
+    } else if(hasDriveThru == false) {
+      
+    }
+    
+    if(hasSecondLocation == true) {
+      if(orderType == 3) {
+        total += 100
+        document.getElementById("cash").innerHTML = "$" + total;
+      } else {
+        
+      }
+    } else if(hasSecondLocation == false) {
+      
+    }
+    
+    if(hasFranchise == true) {
+      if(orderType == 4) {
+        total += 250
+        document.getElementById("cash").innerHTML = "$" + total;
+      } else {
+        
+      }
+    } else if(hasFranchise == false) {
+      
+    }
+    burgersSold += 1
+    document.getElementById("totalBurgers").innerHTML = "Burgers Sold: " + burgersSold;
+    localStorage.setItem("burgers", burgersSold)
   } else {
     alert("That's wrong!")
     document.getElementById("currentBurger").innerHTML = "";
@@ -1127,7 +1183,9 @@ function ranks() {
   if (total < 1) {
     document.getElementById("yourRank").innerHTML = "Bankrupt";
     document.getElementById("yourRank").style.border = "2px solid black";
-    document.getElementById("yourRank").style.backgroundColor = "#505050";
+    document.getElementById("yourRank").style.background = "#505050";
+    document.getElementById("yourRank").style.borderRadius = "0px";
+    document.getElementById("yourRank").style.color = "#000000";
   } else if ((total > 1) && (total < 25)) {;
   document.getElementById("yourRank").innerHTML = "Broke"
   document.getElementById("yourRank").style.border = "2px solid black";
@@ -1145,30 +1203,30 @@ function ranks() {
   document.getElementById("yourRank").style.border = "2px solid black";
   document.getElementById("yourRank").style.backgroundColor = "#50C050";
   document.getElementById("yourRank").style.borderRadius = "5px";
-  } else if ((total > 500) && (total < 1000)) {;
+  } else if ((total > 500) && (total < 2000)) {;
   document.getElementById("yourRank").innerHTML = "Average"
   document.getElementById("yourRank").style.border = "4px solid #E8B323";
   document.getElementById("yourRank").style.backgroundColor = "#50C050";
   document.getElementById("yourRank").style.borderRadius = "15px";
-  } else if ((total > 1000) && (total < 3000)) {;
+  } else if ((total > 2000) && (total < 5000)) {;
   document.getElementById("yourRank").innerHTML = "Good"
   document.getElementById("yourRank").style.border = "4px solid #E8B323";
   document.getElementById("yourRank").style.backgroundColor = "#9090E0";
   document.getElementById("yourRank").style.borderRadius = "15px";
-  } else if ((total > 3000) && (total < 7500)) {;
+  } else if ((total > 5000) && (total < 12000)) {;
   document.getElementById("yourRank").innerHTML = "Rich"
   document.getElementById("yourRank").style.border = "4px solid #E8B323";
   document.getElementById("yourRank").style.backgroundColor = "#9090E0";
   document.getElementById("yourRank").style.borderRadius = "15px";
   document.getElementById("yourRank").style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)"
-  } else if ((total > 7500) && (total < 15000)) {;
+  } else if ((total > 12000) && (total < 50000)) {;
   document.getElementById("yourRank").innerHTML = "Wealthy"
   document.getElementById("yourRank").style.border = "4px solid #7D1CC7";
   document.getElementById("yourRank").style.backgroundColor = "#9090E0";
   document.getElementById("yourRank").style.borderRadius = "15px";
   document.getElementById("yourRank").style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)"
   document.getElementById("yourRank").style.color = "#FF0000";
-  } else if (total > 15000) {
+  } else if (total > 50000) {
   document.getElementById("yourRank").innerHTML = "Royalty"
   document.getElementById("yourRank").style.border = "4px solid #7D1CC7";
   document.getElementById("yourRank").style.backgroundColor = "#FF0000";
@@ -1183,17 +1241,20 @@ ranks();
 function backgroundWhite() {
   document.body.style.backgroundColor = "#FFFFFF";
   document.body.style.background = "rgba(0, 0, 0, 0)";
+  localStorage.setItem("backgroundColor", "white")
 }
 
 function backgroundBlue() {
-  if (total < 20) {
+  if (total < 20 ) {
     alert("Not enough money!")
-  } else {
+  } else if (total > 20) {
   total -= 20;
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 0, 255, 1)";
   ranks();
-  }
+    localStorage.setItem("backgroundColor", "blue")
+  } 
+
 }
 
 function backgroundRed() {
@@ -1204,6 +1265,7 @@ function backgroundRed() {
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(255, 0, 0, 1)";
   ranks();
+    localStorage.setItem("backgroundColor", "red")
   }
 }
 
@@ -1215,6 +1277,7 @@ function backgroundGreen() {
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 255, 0, 1)";
   ranks();
+    localStorage.setItem("backgroundColor", "green")
   }
 }
 
@@ -1226,6 +1289,7 @@ function backgroundBlack() {
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(0, 0, 0, 1)";
   ranks();
+    localStorage.setItem("backgroundColor", "black")
   }
 }
 
@@ -1237,6 +1301,7 @@ function backgroundPurple() {
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(255, 0, 255, 1)";
   ranks();
+    localStorage.setItem("backgroundColor", "purple")
   }
 }
 
@@ -1248,6 +1313,7 @@ function backgroundOrange() {
   document.getElementById("cash").innerHTML = "$" + total;
   document.body.style.background = "rgba(255, 125, 0, 1)";
   ranks();
+    localStorage.setItem("backgroundColor", "orange")
   }
 }
 
@@ -1259,6 +1325,7 @@ function backgroundBronze() {
   document.body.style.background = "linear-gradient(163deg, rgb(140 80 33) 0%, rgb(113 126 98) 35%, rgb(163 86 12) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
+    localStorage.setItem("backgroundColor", "bronze")
   }
 }
 
@@ -1270,6 +1337,7 @@ function backgroundSilver() {
   document.body.style.background = "linear-gradient(163deg, rgb(134 133 133) 0%, rgb(193 193 193) 35%, rgb(138 138 138) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
+    localStorage.setItem("backgroundColor", "silver")
   }
 }
 
@@ -1281,6 +1349,7 @@ function backgroundGold() {
   document.body.style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)";
   document.getElementById("cash").innerHTML = "$" + total;
   ranks();
+    localStorage.setItem("backgroundColor", "gold")
   }
 }
 
@@ -1353,12 +1422,179 @@ function tip() {
   alert("You got a tip!")
 }
 
+
 function load() {
   localStorage.setItem("savedMoney", total);
+  
 }
 
 function saving() {
   total = Number(localStorage.getItem("savedMoney"));
   document.getElementById("cash").innerHTML = "$" + total;
+  ranks();
+  localStorage.getItem("neonSignCheck");
+  localStorage.getItem("deliveryCheck");
+  localStorage.getItem("driveThruCheck");
+  localStorage.getItem("secondLocationCheck");
+  localStorage.getItem("franchiseCheck");
+  if(localStorage.getItem("neonSignCheck") == "true") {
+    hasNeonSign = true;
+  } else if(localStorage.getItem("neonSignCheck") == "false") {
+    hasNeonSign = false;
+  }
+  if(localStorage.getItem("deliveryCheck") == "true") {
+    hasDelivery = true;
+  } else if(localStorage.getItem("deliveryCheck") == "false") {
+    hasDelivery = false;
+  }
+  if(localStorage.getItem("driveThruCheck") == "true") {
+    hasDriveThru = true;
+  } else if(localStorage.getItem("driveThruCheck") == "false") {
+    hasDriveThru = false;
+  }
+  if(localStorage.getItem("secondLocationCheck") == "true") {
+    hasSecondLocation = true;
+  } else if(localStorage.getItem("secondLocationCheck") == "false") {
+    hasSecondLocation = false;
+  }
+  if(localStorage.getItem("franchiseCheck") == "true") {
+    hasFranchise = true;
+  } else if(localStorage.getItem("franchiseCheck") == "false") {
+    hasFranchise = false;
+  }
+  
+  if(localStorage.getItem("backgroundColor") == "blue") {
+    document.body.style.background = "rgba(0, 0, 255, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "red") {
+    document.body.style.background = "rgba(255, 0, 0, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "green") {
+    document.body.style.background = "rgba(0, 255, 0, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "black") {
+    document.body.style.background = "rgba(0, 0, 0, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "purple") {
+    document.body.style.background = "rgba(255, 0, 255, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "orange") {
+    document.body.style.background = "rgba(255, 125, 0, 1)";
+  }
+  if(localStorage.getItem("backgroundColor") == "bronze") {
+    document.body.style.background = "linear-gradient(163deg, rgb(140 80 33) 0%, rgb(113 126 98) 35%, rgb(163 86 12) 100%)";
+  }
+  if(localStorage.getItem("backgroundColor") == "silver") {
+    document.body.style.background = "linear-gradient(163deg, rgb(134 133 133) 0%, rgb(193 193 193) 35%, rgb(138 138 138) 100%)";
+  }
+  if(localStorage.getItem("backgroundColor") == "gold") {
+    document.body.style.background = "linear-gradient(163deg, rgb(229 177 46) 0%, rgb(253 226 151) 35%, rgb(223 179 59) 100%)";
+  }
+  burgersSold = Number(localStorage.getItem("burgers"));
+  document.getElementById("totalBurgers").innerHTML = "Burgers Sold: " + burgersSold;
+}
+
+let hasNeonSign = false;
+let hasDelivery = false;
+let hasDriveThru = false;
+let hasSecondLocation = false;
+let hasFranchise = false;
+
+function neonSign() {
+  if(total < 75) {
+    alert("Not enough money!")
+  } else if (total > 75) {
+    if(hasNeonSign == true) {
+      alert("You already own this!")
+    } else if(hasNeonSign == false) {
+      total -= 75
+      document.getElementById("cash").innerHTML = "$" + total;
+      hasNeonSign = true;
+      ranks();
+      localStorage.setItem("neonSignCheck", "true")
+    }
+  }
+}
+
+function delivery() {
+  if(total < 280) {
+    alert("Not enough money!")
+  } else if (total > 280) {
+    if(hasDelivery == true) {
+      alert("You already own this!")
+    } else if(hasDelivery == false) {
+      total -= 280
+      document.getElementById("cash").innerHTML = "$" + total;
+      hasDelivery = true;
+      ranks();
+      localStorage.setItem("deliveryCheck", "true")
+    }
+  }
+}
+
+function driveThru() {
+  if(total < 1200) {
+    alert("Not enough money!")
+  } else if (total > 1200) {
+    if(hasDriveThru == true) {
+      alert("You already own this!")
+    } else if(hasDriveThru == false) {
+      total -= 1200
+      document.getElementById("cash").innerHTML = "$" + total;
+      hasDriveThru = true;
+      ranks();
+      localStorage.setItem("driveThruCheck", "true")
+    }
+  }
+}
+
+function secondLocation() {
+  if(total < 3500) {
+    alert("Not enough money!")
+  } else if (total > 3500) {
+    if(hasSecondLocation == true) {
+      alert("You already own this!")
+    } else if(hasSecondLocation == false) {
+      total -= 3500
+      document.getElementById("cash").innerHTML = "$" + total;
+      hasSecondLocation = true;
+      ranks();
+      localStorage.setItem("secondLocationCheck", "true")
+    }
+  }
+}
+
+function franchise() {
+  if(total < 9000) {
+    alert("Not enough money!")
+  } else if (total > 9000) {
+    if(hasFranchise == true) {
+      alert("You already own this!")
+    } else if(hasFranchise == false) {
+      total -= 9000
+      document.getElementById("cash").innerHTML = "$" + total;
+      hasFranchise = true;
+      ranks();
+      localStorage.setItem("franchiseCheck", "true")
+    }
+  }
+}
+
+function resetGame() {
+  if(confirm("Are you sure you want to reset?")) {
+    total = 0
+    document.getElementById("cash").innerHTML = "$" + total;
+    localStorage.setItem("backgroundColor", "white")
+    document.body.style.background = "rgba(255, 255, 255, 1)";
+    burgersSold = 0
+    document.getElementById("totalBurgers").innerHTML = "Burgers Sold: " + burgersSold;
+    localStorage.setItem("burgers", burgersSold)
+    localStorage.setItem("neonSignCheck", "false")
+    localStorage.setItem("deliveryCheck", "false")
+    localStorage.setItem("driveThruCheck", "false")
+    localStorage.setItem("secondLocationCheck", "false")
+    localStorage.setItem("franchiseCheck", "false")
+    
+  }
   ranks();
 }
