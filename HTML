@@ -1,4 +1,6 @@
 <div id="userBackground">
+  <div id="totalBurgers">Burgers Sold: 0</div>
+  <br>
 <div id="yourRank"></div>
 <br>
 <div id="cash">$0</div>
@@ -69,10 +71,22 @@
   <button onClick="backgroundGold();">Gold - $1000</button>
   </div>
   <br>
+  <div id="upgrades">Upgrades:
+    <br>
+  <button onClick="neonSign();">Neon Sign - $75</button>
+  <button onClick="delivery();">Delivery - $280</button>
+  <button onClick="driveThru();">Drive-Thru - $1200</button>
+  <button onClick="secondLocation();">Second Location - $3500</button>
+  <button onClick="franchise();">Franchise - $9000</button>
+    </div>
+  <br>
   <div id="vault">
-    <button onClick="openVault();">Vault</button>
+    <button onClick="openVault();" id="vaultButton">Vault</button>
   </div>
+  <br>
   <div id="loadAndSave">
   <button onClick="saving();" id="load">Load</button>
   <button onClick="load();" id="save">Save</button>
 </div>
+  <br>
+  <button onClick="resetGame();" id="resetButton">RESET</button>
