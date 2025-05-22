@@ -513,7 +513,7 @@ function completeOrder() {
     let orderType = Math.floor(Math.random() * 5);
     if(hasDelivery == true) {
       if(orderType == 1) {
-        total += 10
+        total += 15
         document.getElementById("cash").innerHTML = "$" + total;
       } else {
         
@@ -524,7 +524,7 @@ function completeOrder() {
     
     if(hasDriveThru == true) {
       if(orderType == 2) {
-        total += 35
+        total += 40
         document.getElementById("cash").innerHTML = "$" + total;
       } else {
         
@@ -535,7 +535,7 @@ function completeOrder() {
     
     if(hasSecondLocation == true) {
       if(orderType == 3) {
-        total += 100
+        total += 110
         document.getElementById("cash").innerHTML = "$" + total;
       } else {
         
@@ -612,6 +612,7 @@ function restockBeef() {
     beefAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockChicken() {
@@ -648,6 +649,7 @@ function restockChicken() {
     chickenAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockPork() {
@@ -684,6 +686,7 @@ function restockPork() {
     porkAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockVegan() {
@@ -720,6 +723,7 @@ function restockVegan() {
     veganAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockMayo() {
@@ -756,6 +760,7 @@ function restockMayo() {
     mayoAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockHotSauce() {
@@ -792,6 +797,7 @@ function restockHotSauce() {
     hotSauceAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockCheese() {
@@ -828,6 +834,7 @@ function restockCheese() {
     cheeseAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockTomato() {
@@ -864,6 +871,7 @@ function restockTomato() {
     tomatoAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockLettuce() {
@@ -900,6 +908,7 @@ function restockLettuce() {
     lettuceAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockPickle() {
@@ -936,6 +945,7 @@ function restockPickle() {
     pickleAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockBacon() {
@@ -972,6 +982,7 @@ function restockBacon() {
     baconAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockKetchup() {
@@ -1008,6 +1019,7 @@ function restockKetchup() {
     ketchupAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockMustard() {
@@ -1044,6 +1056,7 @@ function restockMustard() {
     mustardAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockOnion() {
@@ -1080,6 +1093,7 @@ function restockOnion() {
     onionAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockFries() {
@@ -1116,6 +1130,7 @@ function restockFries() {
     friesAmount = 5;
   } 
   }
+  ranks();
 }
 
 function restockBun() {
@@ -1123,60 +1138,61 @@ function restockBun() {
     alert("Not enough money!")
   } else {
     if (bunAmount == 10) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     bunAmount = 10;
   } else if (bunAmount == 9) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 1
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 8) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 2
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 7) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 3
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 6) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 4
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 5) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 5
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 4) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 6
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 3) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 7
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 2) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 8
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 1) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 9
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   } else if (bunAmount == 0) {
-    document.getElementById("buns").innerHTML = "Bun - 10";
+    document.getElementById("buns").innerHTML = "Buns - 10";
     total -= 10
     document.getElementById("cash").innerHTML = "$" + total;
     bunAmount = 10;
   }
   }
+  ranks();
 }
 
 function ranks() {
